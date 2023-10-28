@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vilcu_Ana_Lab2.Data;
 
@@ -11,9 +12,10 @@ using Vilcu_Ana_Lab2.Data;
 namespace Vilcu_Ana_Lab2.Migrations
 {
     [DbContext(typeof(Vilcu_Ana_Lab2Context))]
-    partial class Vilcu_Ana_Lab2ContextModelSnapshot : ModelSnapshot
+    [Migration("20231024170436_BookCategories2")]
+    partial class BookCategories2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

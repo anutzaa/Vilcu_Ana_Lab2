@@ -24,5 +24,7 @@ namespace Vilcu_Ana_Lab2.Models
 
         public ICollection<Author>? Authors { get; set; }
 
+        public ICollection<BookCategory>? BookCategories { get; set; }
+
     }
 }

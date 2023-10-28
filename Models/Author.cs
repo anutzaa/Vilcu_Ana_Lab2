@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Vilcu_Ana_Lab2.Models
 {
@@ -13,6 +14,7 @@ namespace Vilcu_Ana_Lab2.Models
         public string LastName { get; set; }
 
         [Display(Name = "Author")]
+        [NotMapped]
         public string Name
         {
             get { return $"{FirstName} {LastName}"; }
