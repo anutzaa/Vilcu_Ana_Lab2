@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vilcu_Ana_Lab2.Data;
 
@@ -11,9 +12,10 @@ using Vilcu_Ana_Lab2.Data;
 namespace Vilcu_Ana_Lab2.Migrations
 {
     [DbContext(typeof(Vilcu_Ana_Lab2Context))]
-    partial class Vilcu_Ana_Lab2ContextModelSnapshot : ModelSnapshot
+    [Migration("20231030142200_publishers_lab4")]
+    partial class publishers_lab4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,9 +36,11 @@ namespace Vilcu_Ana_Lab2.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("FirstName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
