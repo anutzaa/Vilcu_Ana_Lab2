@@ -8,7 +8,7 @@ namespace Vilcu_Ana_Lab2.Models
         public int ID { get; set; }
 
         [Display(Name = "Book Title")]
-        public string Title { get; set; }
+        public string? Title { get; set; }
         public int? AuthorID { get; set; }
         public Author? Author { get; set; }
 
@@ -21,6 +21,11 @@ namespace Vilcu_Ana_Lab2.Models
 
         public int? PublisherID { get; set; }
         public Publisher? Publisher { get; set; }
+
+       // public int? BorrowingID { get; set; }
+
+       // [ForeignKey("BorrowingID")]
+       // public Borrowing? Borrowing { get; set; }
 
         public ICollection<Author>? Authors { get; set; }
 
