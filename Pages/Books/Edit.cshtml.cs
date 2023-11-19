@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -9,8 +10,9 @@ using Microsoft.EntityFrameworkCore;
 using Vilcu_Ana_Lab2.Data;
 using Vilcu_Ana_Lab2.Models;
 
-namespace Vilcu_Ana_Lab2.Pages.Books { 
+namespace Vilcu_Ana_Lab2.Pages.Books {
 
+    [Authorize(Roles = "Admin")]
     public class EditModel : BookCategoriesPageModel
 {
     private readonly Vilcu_Ana_Lab2.Data.Vilcu_Ana_Lab2Context _context;
